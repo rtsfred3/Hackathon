@@ -22,6 +22,16 @@
     cursor: pointer;
 }
 
+.logo img{
+    width: 50px;
+    margin-top: -15px;
+    margin-right: 48px;
+}
+
+.active{
+    color: #8dcef3 !important;
+}
+
 .signup-btn{
     top: 40px;
     right: 80px;
@@ -30,7 +40,7 @@
     color: #fff;
     border: 2px solid transparent;
     border-radius: 20px;
-    background-image: linear-gradient(#42455a,#42455a), radial-gradient(circile at top left, #fd00da, #19d7f8);
+    background-image: linear-gradient(#42455a,#42455a), radial-gradient(circle at top left, #e778d8, #8dcef3);
     background-origin: border-box;
     background-clip: content-box, border-box;
 }
