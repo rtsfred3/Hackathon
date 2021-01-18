@@ -2,28 +2,28 @@
 <html>
    <head>
       <title>myExposure</title>
-      <link rel= "stylesheet" href= "style3.css">
+      <link rel= "stylesheet" href= "{{ url_for('static', filename='style3.css') }}">
 
-   </head>	
+   </head>
    <body>
-      <div class = "container">
-          <div class = "menu">
-              <ul>
-                  <li class= "logo"><img src= "circle.png"></li>
-                  <li>Home</li>
-                  <li>Resources</li>
-                  <li>About Us</li>
-                  <li class ="active">Contact</li>
-                  <li><a href= "#" class= "signup-btn"><span>Start</span></a></li>
-              </ul>
-          </div>
+    <div class = "container">
+        <div class = "menu">
+            <ul>
+                <li class= "logo"><img src= "{{ url_for('static', filename='Circle.png') }}"></li>
+                <li><a href= "home.html" style="text-decoration: none">Home</a></li>
+                <li ><a href= "resources.html" style="text-decoration: none">Resources</a></li>
+                <li><a href= "aboutus.html" style="text-decoration: none">About Us</a></li>
+                <li><a href=contact.html class="active"> Contact</a></li>
+                <li><a href= "Prequestionnare.html" class= "signup-btn"><span>Start</span></a></li>
+            </ul>
+        </div>
           <div class= "banner">
               <div class = "app-text">
                   <h1>
                       If you need assistance or have an emergency, please contact your nearest health care center. <br>
                   </h1>
                   <p>
-                      Works cited for pictures used: 
+                      Works cited for pictures used:
                       <br>
                       <a href='https://pngtree.com/so/coronavirus'>coronavirus png from pngtree.com</a>
                       <br>
@@ -35,9 +35,9 @@
                   </div>
               </div>
               <div class = "app-picture">
-                  <img src = "pandemic.png">
+                  <img src = "{{ url_for('static', filename='pandemic.png') }}">
               </div>
           </div>
       </div>
-   </body>	
+   </body>
 </html>

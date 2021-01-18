@@ -2,21 +2,21 @@
 <html>
    <head>
       <title>myExposure</title>
-      <link rel= "stylesheet" href= "style.css">
+      <link rel= "stylesheet" href= "{{ url_for('static', filename='style.css') }}">
 
-   </head>	
+   </head>
    <body>
-      <div class = "container">
-          <div class = "menu">
-              <ul>
-                  <li class= "logo"><img src= "circle.png"></li>
-                  <li class ="active">Home</li>
-                  <li>Resources</li>
-                  <li>About Us</li>
-                  <li>Contact</li>
-                  <li><a href= "#" class= "signup-btn"><span>Start</span></a></li>
-              </ul>
-          </div>
+    <div class = "container">
+        <div class = "menu">
+            <ul>
+                <li class= "logo"><img src= "{{ url_for('static', filename='Circle.png') }}"></li>
+                <li><a href= "{{ url_for('index') }}" class ="active">Home</a></li>
+                <li ><a href= "{{ url_for('resources') }}" style="text-decoration: none">Resources</a></li>
+                <li><a href= "{{ url_for('aboutus') }}" style="text-decoration: none">About Us</a></li>
+                <li><a href= "{{ url_for('contact') }}" style="text-decoration: none"> Contact</a></li>
+                <li><a href= "{{ url_for('login') }}" class= "signup-btn"><span>Start</span></a></li>
+            </ul>
+        </div>
           <div class= "banner">
               <div class = "app-text">
                   <h1>
@@ -27,8 +27,8 @@
                       risk in anything we do and it's important to observe the things we do daily. <br>
                       myExposure will allow you to do just that. Complete the questionnaire and find out <br>
                       what your exposure risk is. Relax, use this information to make smarter decisions <br>
-                      and compare your score with your social circle. 
-                    
+                      and compare your score with your social circle.
+
                   </p>
                   <div class = "play-btn">
                       <div class = "play-btn-inner">
@@ -36,9 +36,9 @@
                   </div>
               </div>
               <div class = "app-picture">
-                  <img src = "pandemic.png">
+                  <img src = "{{ url_for('static', filename='pandemic.png') }}">
               </div>
           </div>
       </div>
-   </body>	
+   </body>
 </html>

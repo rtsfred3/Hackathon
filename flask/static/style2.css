@@ -29,6 +29,7 @@
 }
 
 .active{
+    text-decoration:none;
     color: #8dcef3 !important;
 }
 

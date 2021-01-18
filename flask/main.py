@@ -16,8 +16,7 @@ db = database.database()
 
 @app.route('/')
 def index():
-    #return "<html><body>hi</body></html>"
-    return render_template("index.html")
+    return render_template("home.html")
 
 @app.route('/sendScore', methods=['POST'])
 def sendScore():
@@ -37,12 +36,25 @@ def sendScore():
 def aboutus():
     return render_template("aboutus.html")
 
-@app.route('/testing', methods=['GET', 'POST'])
-def testing():
-    if request.method == 'POST':
-        print(request.form['score'])
-        return "{'status':200}", 200
+@app.route('/activity')
+def activity():
     return render_template("activity.html")
+
+@app.route('/socialevents')
+def socialevents():
+    return render_template("SocialEvents.html")
+
+@app.route('/prequestionnare')
+def prequestionnare():
+    return render_template("Prequestionnare.html")
+
+@app.route('/contact')
+def contact():
+    return render_template("contact.html")
+
+@app.route('/resources')
+def resources():
+    return render_template("resources.html")
 
 @app.route('/success')
 def success():
@@ -55,8 +67,10 @@ def logoff():
     session['user'] = {}
     return redirect(url_for('index'))
 
-@app.route('/login', methods=['POST'])
+@app.route('/login', methods=['GET', 'POST'])
 def login():
+    if request.method == 'GET':
+        return render_template("login.html")
     user = db.getUser(request.form['email'])
     if not user.exists:
         return redirect(url_for('index'))
@@ -67,7 +81,7 @@ def login():
             del session['user']['password']
             session['cache'] = datetime.now()+timedelta(hours=8)
             
-            return redirect(url_for('success'))
+            return redirect(url_for('prequestionnare'))
         else:
             session['logged_in'] = False
             session['user'] = {}

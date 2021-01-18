@@ -1,24 +1,25 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 
-<html lang="en"> 
-    
-<head> 
+<html lang="en">
+
+<head>
     <meta charset="utf=8">
-    <meta name="viewport" content="width-device-width", initial-scale=1">
+    <meta name="viewport" content="width-device-width", initial-scale="1">
     <title> COVID-19 Score Tracker</title>
     <link rel="stylesheet" href="Homepage.css">
-    
+    <link rel= "stylesheet" href= "{{ url_for('static', filename='Homepage.css') }}">
+
 </head>
 
 <body>
     <!--navigation section-->
-   
-   
+
+
         <nav>
             <div class="topnav">
                 <a href="Homepage.html">Home</a>
             </div>
-            
+
             <div class="topNav2">
                 <a href="CreatorsBio.html">Creators Bio</a>
             </div>
@@ -28,34 +29,34 @@
                 <div class="topNav4>">
                     <a href="EmergencyContacts.html">Emergency Contacts</a>
                 </div>
-               
-           
+
+
         </nav>
-    
-    
-    
+
+
+
     <main>
         <h1>COVID-19 TRACKER</h1>
 
-    
-    
+
+
    <section>
-       
+
 <div>
         <h6>New Member?</h6>
         <h2>Sign-Up</h2>
 </div>
-    
+
 <div>
         <h6>Alraedy a Member?</h6>
         <h2>Sign-In</h2>
         <!--need data base here-->
     </div>
-   </section> 
-   
+   </section>
+
    <section>
        <h3>My Score</h3>
-       
+
        <body>
         <p>Shows default first, if not signed up or signed in.
 If already signed-up and already completed a questionnare. Show recent score. </p>
@@ -65,8 +66,8 @@ If already signed-up and already completed a questionnare. Show recent score. </
    <section>
        <h3> Recent Survey Activities:</h3>
        <p>
-        Show default example activities, if not signed up or signed in. 
-        If signed-in and completed a questionnare. show recent actvity.   
+        Show default example activities, if not signed up or signed in.
+        If signed-in and completed a questionnare. show recent actvity.
        </p>
    </section>
 
@@ -78,7 +79,7 @@ If already signed-up and already completed a questionnare. Show recent score. </
     <ul>
         <li><a href="Prequestionnare.html">Start questionnare</a></li>
     </ul>
-    
+
 </nav>
 
 
@@ -86,5 +87,3 @@ If already signed-up and already completed a questionnare. Show recent score. </
 
 </body>
 </html>
-
-

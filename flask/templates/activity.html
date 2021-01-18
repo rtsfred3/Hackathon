@@ -62,8 +62,7 @@ div.Prev{
            font-size: 400%;
 }
     </style>
-    <script src="{{ url_for('static', filename='submit.js') }}">
-    </script>
+    <script src="{{ url_for('static', filename='submit.js') }}"></script>
 </head>
 <body>
     <div class="header">
@@ -73,49 +72,49 @@ div.Prev{
     <div class=questionnare1>
         <form>
             <input type="checkbox" id="Activity1" name="mail" value="1">
-            <label for="Activity1"><span class="checkboxtext">Opening the mail</span></label><br> <!-- br means break line-->
+            <label for="Activity1"><span class="checkboxtext">Opening the mail</span></label><br>
 
             <input type="checkbox" id="Activity2" name="gas" value="2">
-            <label for="Activity2"><span class="checkboxtext">Pumping Gasoline </span></label><br> <!-- br means break line-->
+            <label for="Activity2"><span class="checkboxtext">Pumping Gasoline </span></label><br>
 
             <input type="checkbox" id="Activity3" name="tennis" value="2">
-            <label for="Activity3"><span class="checkboxtext"> Playing Tennis</span></label><br> <!-- br means break line-->
+            <label for="Activity3"><span class="checkboxtext"> Playing Tennis</span></label><br>
 
             <input type="checkbox" id="Activity4" name="camping" value="2">
-            <label for="Activity4"><span class="checkboxtext">Going Camping </span></label><br> <!-- br means break line-->
+            <label for="Activity4"><span class="checkboxtext">Going Camping </span></label><br>
 
             <input type="checkbox" id="Activity5" name="basketball" value="7">
-            <label for="Activity5"><span class="checkboxtext"> Playing basketball</span></label><br> <!-- br means break line--> <!--0 for none of the above-->
+            <label for="Activity5"><span class="checkboxtext"> Playing basketball</span></label><br>  <!--0 for none of the above-->
 
             <input type="checkbox" id="Activity6" name="football" value="7">
-            <label for="Activity6"><span class="checkboxtext"> Playing football</span></label><br> <!-- br means break line--> <!--0 for none of the above-->
+            <label for="Activity6"><span class="checkboxtext"> Playing football</span></label><br>  <!--0 for none of the above-->
 
             <input type="checkbox" id="Activity7" name="swimming" value="6">
-            <label for="Activity7"><span class="checkboxtext"> Swimming in public pool</span></label><br> <!-- br means break line--> <!--0 for none of the above-->
+            <label for="Activity7"><span class="checkboxtext"> Swimming in public pool</span></label><br>  <!--0 for none of the above-->
 
             <input type="checkbox" id="Activity8" name="gym" value="8">
-            <label for="Activity8"><span class="checkboxtext"> Working out at a gym</span></label><br> <!-- br means break line--> <!--0 for none of the above-->
+            <label for="Activity8"><span class="checkboxtext"> Working out at a gym</span></label><br>  <!--0 for none of the above-->
 
             <input type="checkbox" id="Activity9" name="hugging" value="7">
-            <label for="Activity9"><span class="checkboxtext"> Hugging or shaking hands with a friend</span></label><br> <!-- br means break line--> <!--0 for none of the above-->
+            <label for="Activity9"><span class="checkboxtext"> Hugging or shaking hands with a friend</span></label><br>  <!--0 for none of the above-->
 
             <input type="checkbox" id="Activity10" name="walk" value="3">
-            <label for="Activity8"><span class="checkboxtext"> Walk, run or bike with others</span></label><br> <!-- br means break line--> <!--0 for none of the above-->
+            <label for="Activity8"><span class="checkboxtext"> Walk, run or bike with others</span></label><br>  <!--0 for none of the above-->
 
             <input type="checkbox" id="Activity11" name="sitting" value="4">
-            <label for="Activity11"><span class="checkboxtext"> Sitting in a doctor's waiting room</span></label><br> <!-- br means break line--> <!--0 for none of the above-->
+            <label for="Activity11"><span class="checkboxtext"> Sitting in a doctor's waiting room</span></label><br>  <!--0 for none of the above-->
 
             <input type="checkbox" id="Activity12" name="school" value="6">
-            <label for="Activity12"><span class="checkboxtext"> Sending kids to school,camp or day care</span></label><br> <!-- br means break line--> <!--0 for none of the above-->
+            <label for="Activity12"><span class="checkboxtext"> Sending kids to school,camp or day care</span></label><br>  <!--0 for none of the above-->
 
             <input type="checkbox" id="Activity13" name="downtown" value="4">
-            <label for="Activity13"><span class="checkboxtext"> Walking in a busy downtown</span></label><br> <!-- br means break line--> <!--0 for none of the above-->
+            <label for="Activity13"><span class="checkboxtext"> Walking in a busy downtown</span></label><br>  <!--0 for none of the above-->
 
-            <input type="checkbox" id="Activity0" name="Activity0" value="0">
-            <label for="Activity0"><span class="checkboxtext"> None of the above</span></label><br> <!-- br means break line--> <!--0 for none of the above-->
+            <input type="checkbox" id="Activity0" name="None" value="0">
+            <label for="Activity0"><span class="checkboxtext"> None of the above</span></label><br>  <!--0 for none of the above-->
 
             <input id="submit" type="submit" value="<- PREV">
-            <input id="submit" type="submit" value="NEXT ->" onclick="submitScore(event);">
+            <input id="submit" type="submit" value="NEXT ->" onclick="submitScore(event, 14);">
         </form>
     </div>
     <!-- <div class="Next">

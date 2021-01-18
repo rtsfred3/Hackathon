@@ -2,14 +2,14 @@
 <html>
    <head>
       <title>myExposure</title>
-      <link rel= "stylesheet" href= "style.css">
+      <link rel= "stylesheet" href= "{{ url_for('static', filename='style.css') }}">
 
-   </head>	
+   </head>
    <body>
       <div class = "container">
           <div class = "menu">
               <ul>
-                  <li class= "logo"><img src= "circle.png"></li>
+                  <li class= "logo"><img src= "{{ url_for('static', filename='Circle.png') }}"></li>
                   <li class ="active">Home</li>
                   <li>Resources</li>
                   <li>About Us</li>
@@ -27,8 +27,8 @@
                       risk in anything we do and it's important to observe the things we do daily. <br>
                       myExposure will allow you to do just that. Complete the questionnaire and find out <br>
                       what your exposure risk is. Relax, use this information to make smarter decisions <br>
-                      and compare your score with your social circle. 
-                    
+                      and compare your score with your social circle.
+
                   </p>
                   <div class = "play-btn">
                       <div class = "play-btn-inner">
@@ -36,9 +36,9 @@
                   </div>
               </div>
               <div class = "app-picture">
-                  <img src = "pandemic.png">
+                  <img src = "{{ url_for('static', filename='pandemic.png') }}">
               </div>
           </div>
       </div>
-   </body>	
+   </body>
 </html>

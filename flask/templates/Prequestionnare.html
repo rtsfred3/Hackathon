@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 
-<html lang="en"> 
+<html lang="en">
     <head>
         <meta charset="utf=8">
         <title>Prequestionnare Survey</title>
-        
+
     <style>
         body
         {
@@ -36,7 +36,7 @@
             margin-right:auto;
             width:50%;
             text-align:center;
-            
+
         }
         div.bodyimage
         {
@@ -98,7 +98,7 @@
 
                 Here is the risk chart below : </p>
         </div>
-            
+
     </div>
 
     <div class="bodyimage">
@@ -115,14 +115,15 @@
                 <input type="checkbox">
                 <span>Please check this box if you have read the terms and conditions of this survey.</span>
             </label>
-            
+
     </div>
 <div class="AfterSen">
 
     <p>After you check the check box, click Next to continue to do the survey</p>
 
 <div class="Nextbutton">
-   <a href="Activity.html">Next</a>
+   <!-- <a href="/activity">Next</a> -->
+   <a href="{{ url_for('activity') }}">Next</a>
 </div>
     </body>
 </html>
