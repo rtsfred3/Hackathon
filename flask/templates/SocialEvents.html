@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+<head>
+    <meta charset="utf=8">
+    <title>Questionnare 1</title>
+    <style>
+div.header
+{
+    background-color: lightblue;
+    text-align: center;
+    font-size: 300%;
+}
+div.questionnare1
+{
+    background-color: grey;
+    display:table;
+    padding: 5px;
+    border: 1px solid blue;    
+  font-size: 200%;
+  margin: 0 auto;
+
+  
+}
+input[type='checkbox']
+{
+    -ms-transform: scale(2); 
+  -moz-transform: scale(2); 
+  -webkit-transform: scale(2); 
+  -o-transform: scale(2);
+  transform: scale(2);
+  padding: 10px;
+}
+.checkboxtext
+{
+    font-size:110%;
+    display: inline;
+}
+div.Next
+{
+    border-style:outset;
+        border-color: green;
+            text-align:center;
+            position: relative;
+            width: 300px;
+            height: 78px;
+            left: 800px;
+            top: 100px;
+            background-color: green;
+           font-size: 400%;
+}
+div.prev
+{
+    border-style:outset;
+        border-color: green;
+            text-align:center;
+            position: relative;
+            width: 300px;
+            height: 78px;
+            left: 800px;
+            top: 100px;
+            background-color: green;
+           font-size: 400%;
+}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>Have you been to any of these Social Events/ Work Industries for the past 14 days? (check all applies): </h2>
+
+    </div>
+    <div class=questionnare1>
+    <!--creating questionnares need JS to setup database-->
+    <form action="/action_page.php">
+            <input type="checkbox" id="Event1" name="Event1" value="religous">
+            <label for="Event1"><span class="checkboxtext">Attending a religous service with 500+ worshippers</span></label><br> <!-- br means break line-->
+
+            <input type="checkbox" id="Event2" name="Event2" value="concert">
+            <label for="Event2"><span class="checkboxtext"> Attending a large musical concert</span></label><br> <!-- br means break line-->
+            
+            <input type="checkbox" id="Event3" name="Event3" value="wedding_funeral">
+            <label for="Event3"><span class="checkboxtext">Attending a wedding or funeral </span></label><br> <!-- br means break line-->
+            
+            <input type="checkbox" id="Event4" name="Event4" value="Travel">
+            <label for="Event4"><span class="checkboxtext"> Travel to other places by plane </span></label><br> <!-- br means break line-->
+            
+            <input type="checkbox" id="Event5" name="Event5" value="backyard">
+            <label for="Event5"><span class="checkboxtext"> Attending a backyard barbeque</span></label><br> <!-- br means break line-->
+           
+            <input type="checkbox" id="Event6" name="Event6" value="office">
+            <label for="Event6"><span class="checkboxtext"> Working a week in an office building</span></label><br> <!-- br means break line-->
+            
+            <input type="checkbox" id="Event0" name="Event0" value="None">
+            <label for="Event0"><span class="checkboxtext"> none of the above</span></label><br> <!-- br means break line--> <!--0 for none of the above-->
+            
+     </form>
+    </div>
+    <div class="Next">
+        <a href="review.html"> SUBMIT</a>
+    </div>
+    <div class="prev">
+        <a href="places.html"> <- PREV</a>
+    </div>
+</body>
+</html>

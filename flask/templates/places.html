@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+<head>
+    <meta charset="utf=8">
+    <title>Questionnare 1</title>
+    <style>
+div.header
+{
+    background-color: lightblue;
+    text-align: center;
+    font-size: 300%;
+}
+div.questionnare1
+{
+    background-color: grey;
+    display:table;
+    padding: 5px;
+    border: 1px solid blue;    
+  font-size: 200%;
+  margin: 0 auto;
+
+  
+}
+input[type='checkbox']
+{
+    -ms-transform: scale(2); 
+  -moz-transform: scale(2); 
+  -webkit-transform: scale(2); 
+  -o-transform: scale(2);
+  transform: scale(2);
+  padding: 10px;
+}
+.checkboxtext
+{
+    font-size:110%;
+    display: inline;
+}
+div.Next
+{
+    border-style:outset;
+        border-color: green;
+            text-align:center;
+            position: relative;
+            width: 300px;
+            height: 78px;
+            left: 800px;
+            top: 100px;
+            background-color: green;
+           font-size: 400%;
+}
+div.Prev
+{
+    border-style:outset;
+        border-color: green;
+            text-align:center;
+            position: relative;
+            width: 300px;
+            height: 78px;
+            left: 800px;
+            top: 100px;
+            background-color: green;
+           font-size: 400%;
+}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>Have you been to any of these places for the past 14 days? (check all applies): </h2>
+
+    </div>
+    <div class=questionnare1>
+    <!--creating questionnares need JS to setup database-->
+   
+
+    
+    <form action="/action_page.php">
+            
+        <input type="checkbox" id="places" name="places" value="bar">
+            <label for="places"><span class="checkboxtext"> bar</span></label><br> <!-- br means break line-->
+            
+            <input type="checkbox" id="place2" name="place2" value="beach">
+            <label for="place2"><span class="checkboxtext"> beach</span></label><br> <!-- br means break line-->
+            
+            <input type="checkbox" id="place1" name="place1" value="store">
+            <label for="place1"><span class="checkboxtext">grocery store (aka grocery shopping)</span></label><br> <!-- br means break line-->
+
+            <input type="checkbox" id="place" name="place" value="barbershop">
+            <label for="place"><span class="checkboxtext"> hair salon or barbershop</span></label><br> <!-- br means break line-->
+        
+            <input type="checkbox" id="place9" name="place9" value="hotel">
+            <label for="place9"><span class="checkboxtext"> hotel(staying for two nights minimum)</span></label><br> <!-- br means break line-->
+            
+            <input type="checkbox" id="place10" name="place10" value="Friends House">
+            <label for="place10"><span class="checkboxtext"> house(Friend)</span></label><br> <!-- br means break line-->
+            
+            <input type="checkbox" id="place11" name="place11" value="Elderly House">
+            <label for="place11"><span class="checkboxtext"> house(Elderly/ Relatives)</span></label><br> <!-- br means break line-->
+            
+            <input type="checkbox" id="place3" name="place3" value="movie theatre">
+            <label for="place3"><span class="checkboxtext">movie theatre </span></label><br> <!-- br means break line-->
+            
+            <input type="checkbox" id="place15" name="place15" value="library">
+            <label for="place15"><span class="checkboxtext">library or museum</span></label><br> <!-- br means break line-->
+           
+            <input type="checkbox" id="place4" name="place4" value="PostOffice">
+            <label for="place4"><span class="checkboxtext"> post office </span></label><br> <!-- br means break line-->
+            
+            <input type="checkbox" id="place12" name="place12" value="park amusement">
+            <label for="place12"><span class="checkboxtext"> park(amusement park)</span></label><br> <!-- br means break line-->
+            
+            <input type="checkbox" id="place13" name="place13" value="park public">
+            <label for="place13"><span class="checkboxtext"> park(public park)</span></label><br> <!-- br means break line-->
+            
+            <input type="checkbox" id="place14" name="place14" value="PlayGround">
+            <label for="place14"><span class="checkboxtext"> PlayGround( spending 1 hr mimimum)</span></label><br> <!-- br means break line-->
+            
+            <input type="checkbox" id="place5" name="place5" value="restaurant inside">
+            <label for="place5"><span class="checkboxtext"> restaurant(Eating inside)</span></label><br> <!-- br means break line-->
+           
+            <input type="checkbox" id="place6" name="place6" value="restaurant outside">
+            <label for="place6"><span class="checkboxtext"> restaurant(Eating outside)</span></label><br> <!-- br means break line-->
+           
+            <input type="checkbox" id="place7" name="place7" value="restaurant takeout">
+            <label for="place7"><span class="checkboxtext"> restaurant(Going for a takeout)</span></label><br> <!-- br means break line-->
+           
+            <input type="checkbox" id="place8" name="place8" value="restaurant buffet">
+            <label for="place8"><span class="checkboxtext"> restaurant(Eating at a buffet)</span></label><br> <!-- br means break line-->
+           
+            <input type="checkbox" id="place16" name="place16" value="mall">
+            <label for="place16"><span class="checkboxtext">shopping mall</span></label><br> <!-- br means break line-->
+           
+            <input type="checkbox" id="place17" name="place17" value="stadium">
+            <label for="place17"><span class="checkboxtext">sports stadium</span></label><br> <!-- br means break line-->
+           
+            <input type="checkbox" id="place0" name="place0" value="None">
+            <label for="place0"><span class="checkboxtext"> none of the above</span></label><br> <!-- br means break line--> <!--0 for none of the above-->
+            
+     </form>
+    </div>
+    <div class="Next">
+        <a href="SocialEvents.html"> NEXT -></a>
+    </div>
+    <div class="Prev">
+        <a href="Activity.html"> <-PREV</a><!--re edit CSS later-->
+</body>
+</html>

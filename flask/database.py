@@ -10,7 +10,7 @@ class DailyScore:
         self.date_created = date_created
     
     def __str__(self):
-        return "{'user_id':" + str(self.user_id) + ", 'score':" + str(self.score) + ", 'date_created':'" + self.date_created.strftime("%Y-%m-%dT%H:%M:%SZ") + "'}"
+        return '{"user_id":' + str(self.user_id) + ', "score":' + str(self.score) + ', "date_created":"' + self.date_created.strftime("%Y-%m-%dT%H:%M:%SZ") + '"}'
     
     def __getitem__(self, n):
         if n == "user_id": return self.user_id
@@ -67,8 +67,9 @@ class User:
         
         out = c.fetchall()[::-1][:14]
         
-        for t in out:
-            result[6].append(DailyScore(result[0], t[0], t[1]))
+        if len(out) > 0:
+            for t in out:
+                result[6].append(DailyScore(result[0], t['score'], t['date_created']))
             
         result[4] = result[4].strftime("%Y-%m-%dT%H:%M:%S-09:00")
         
@@ -78,7 +79,7 @@ class User:
         if self.exists == False: return {}
         if len(self.user[6]) == 0:
             return {"id":self.user[0], "name":self.user[1], "email":self.user[2], "password":self.user[3], "date_created":self.user[4], "friends":self.user[5], "scores":self.user[6], 'avgScore':0}
-        return {"id":self.user[0], "name":self.user[1], "email":self.user[2], "password":self.user[3], "date_created":self.user[4], "friends":self.user[5], "scores":self.user[6], 'avgScore':(sum([i["score"] for i in self.user[6]])/len(self.user[6]))}
+        return {"id":self.user[0], "name":self.user[1], "email":self.user[2], "password":self.user[3], "date_created":self.user[4], "friends":self.user[5], "scores":[json.loads(str(i)) for i in self.user[6]], 'avgScore':(sum([i["score"] for i in self.user[6]])/len(self.user[6]))}
     
     def __str__(self):
         if not self.exists: return "{}"
@@ -109,20 +110,20 @@ class database:
             try:
                 executable = cursor.execute(query, data)
                 if query.lower().find("insert") >= 0:
-                    self.connection.commit()
+                    self.dbx.commit()
                     return cursor.lastrowid
                 elif query.lower().find("select") >= 0:
                     result = cursor.fetchall()
                     return result
                 else:
-                    self.connection.commit()
+                    self.dbx.commit()
             except Exception as e:
                 print("Something went wrong", e)
                 return False    
 
 def main():
     db = database()
-    b = db.getUser("rtsfred@gmail.com")
+    b = db.getUser("rtsfred3@gg.gg")
     print(b)
     print(b.json)
 

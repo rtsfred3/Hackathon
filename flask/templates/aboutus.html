@@ -1,0 +1,72 @@
+
+<html>
+   <head>
+      <title>myExposure</title>
+      <!-- <link rel= "stylesheet" href= "style2.css"> -->
+      <link rel= "stylesheet" href= "{{ url_for('static', filename='style2.css') }}">
+
+   </head>
+   <body>
+      <div class = "container">
+          <div class = "menu">
+              <ul>
+                  <li class= "logo"><img src= "{{ url_for('static', filename='circle.png') }}"></li>
+                  <li>Home</li>
+                  <li>Resources</li>
+                  <li class ="active">About Us</li>
+                  <li>Contact</li>
+                  <li><a href= "#" class="signup-btn"><span>Start</span></a></li>
+              </ul>
+          </div>
+          <div class= "banner">
+
+              <div class = "app-picture">
+                  <c1>
+                    <img src = "{{ url_for('static', filename='ronvic.png') }}">
+                  </c1>
+
+                  <c2>
+                    <img src = "{{ url_for('static', filename='christian.png') }}">
+                  </c2>
+
+                  <c3>
+                    <img src = "{{ url_for('static', filename='ryan.png') }}">
+                  </c3>
+                </div>
+
+
+              <div class = "app-text">
+                  <h1>
+                      Ronvic <br> Cuevas
+                  </h1>
+
+                  <h2>
+                      Christian Rodriguez
+                  </h2>
+
+                  <h3>
+                      Ryan Fredrickson
+                  </h3>
+                </div>
+
+                <div class = "app-bios">
+                    <p1>
+                        I am a third year Computer Science Major at the University of California, Davis. My Dream is to <br>
+                        become a Web Developer or Game Developer. My favorite hobbies are playing recreational basketball, <br>
+                        playing video games and coding.
+                    </p1>
+
+                    <p2>
+                        I am a fourth year Civil Engineer Major at the University of California, Davis. I love challenging <br>
+                        myself to learn new things and found a great interest in software engineering and web development.
+                        I enjoy spending time with my <br> family, running, and painting.
+                    </p2>
+
+                    <p3>
+                        A Senior Computer Science Major at University of Portland<br>
+                    </p3>
+                </div>
+          </div>
+      </div>
+   </body>
+</html>

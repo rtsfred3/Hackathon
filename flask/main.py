@@ -19,9 +19,33 @@ def index():
     #return "<html><body>hi</body></html>"
     return render_template("index.html")
 
+@app.route('/sendScore', methods=['POST'])
+def sendScore():
+    if request.method == 'POST' and session['logged_in']:
+        query = "INSERT INTO dailyscore (user_id, score) VALUES (%(user_id)s, %(score)s);"
+        data = {
+            'user_id': session['user']['id'],
+            'score': request.form['score']
+        }
+        db.query_db(query, data)
+        session['user']['scores'].append(int(request.form['score']))
+        return "{'status':200}", 200
+    else:
+        return "{'status':418, 'error':'not logged in'}", 418
+
+@app.route('/aboutus')
+def aboutus():
+    return render_template("aboutus.html")
+
+@app.route('/testing', methods=['GET', 'POST'])
+def testing():
+    if request.method == 'POST':
+        print(request.form['score'])
+        return "{'status':200}", 200
+    return render_template("activity.html")
+
 @app.route('/success')
 def success():
-    print(session['cache'])
     if session['logged_in'] and not (session['user'] == {}): return render_template("success.html")
     return redirect(url_for('index'))
 
@@ -42,8 +66,6 @@ def login():
             session['user'] = user.json
             del session['user']['password']
             session['cache'] = datetime.now()+timedelta(hours=8)
-            
-            print(session)
             
             return redirect(url_for('success'))
         else:
@@ -92,7 +114,6 @@ def register():
         
         session['logged_in'] = True
         session['user'] = user.json
-        print(session['user'])
         del session['user']['password']
         session['cache'] = datetime.now()+timedelta(hours=8)
         flash("You successfully registered.")

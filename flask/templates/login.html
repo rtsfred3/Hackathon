@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <style>
+      input{
+        border-radius: 3px;
+      }
+
+      .block{
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1><u>Login and Registraion</u></h1>
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          {% for message in messages %}
+            <p>{{message}}</p>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+
+      <div id="registration" class="block">
+        <form action='register' method='post'>
+          Email:<br /><input name="email" type="text">
+          <br /><br />Name:<br /><input name="name" type="text">
+          <br /><br />Password:<br /><input name="password" type="password">
+          <br /><br />Confirm Password:<br /><input name="confirm_password" type="password">
+          <br /><br /><input class="btn btn-primary" type='submit' value='Submit'>
+        </form>
+      </div>
+
+      <div id="login" class="block">
+        <form action='login' method='post'>
+          Email:<br /><input name="email" type="text">
+          <br /><br />Password:<br /><input name="password" type="password">
+          <br /><br /><input class="btn btn-primary" type='submit' value='Submit'>
+        </form>
+      </div>
+
+    </div>
+  </body>
+</html>
